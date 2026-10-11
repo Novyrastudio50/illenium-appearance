@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apparence</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/style.css" />
+</head>
+<body>
+  <div id="app" class="hidden">
+    <!-- Panneau principal (gauche) -->
+    <aside class="shell">
+      <nav class="rail"><div class="rail-logo"></div><div class="rail-sep"></div><div id="rail" class="rail-items"></div></nav>
+      <section class="panel">
+        <header class="panel-head">
+          <div class="brand"><span class="brand-dot"></span><span class="brand-name" id="brand-name">Novyra</span><span class="brand-sub">Studio</span></div>
+          <h1 id="panel-title">—</h1>
+        </header>
+        <div class="panel-body" id="panel-body"></div>
+        <footer class="panel-foot">
+          <button class="btn ghost" id="btn-exit">Quitter</button>
+          <button class="btn primary" id="btn-save">Enregistrer</button>
+        </footer>
+      </section>
+    </aside>
+
+    <!-- Barre d'outils (droite) -->
+    <aside class="tools" id="tools">
+      <div class="tool-group">
+        <span class="tool-title">Caméra</span>
+        <button class="tool" data-cam="head" title="Tête"></button>
+        <button class="tool" data-cam="body" title="Torse"></button>
+        <button class="tool" data-cam="bottom" title="Jambes"></button>
+      </div>
+      <div class="tool-group">
+        <span class="tool-title">Vue</span>
+        <button class="tool" data-rot="left" title="Pivoter à gauche"></button>
+        <button class="tool" data-rot="right" title="Pivoter à droite"></button>
+        <button class="tool" data-turn title="Demi-tour"></button>
+      </div>
+      <div class="tool-group">
+        <span class="tool-title">Tenue</span>
+        <button class="tool" data-cloth="head" title="Retirer / remettre le chapeau"></button>
+        <button class="tool" data-cloth="body" title="Retirer / remettre le haut"></button>
+        <button class="tool" data-cloth="bottom" title="Retirer / remettre le bas"></button>
+      </div>
+    </aside>
+
+    <div class="hint"><kbd>Q</kbd><kbd>D</kbd> tourner le personnage</div>
+
+    <!-- Fenêtre de confirmation -->
+    <div class="modal-wrap hidden" id="modal">
+      <div class="modal">
+        <div class="modal-logo"></div>
+        <h2 id="modal-title"></h2>
+        <p id="modal-desc"></p>
+        <div class="modal-actions">
+          <button class="btn ghost" id="modal-no"></button>
+          <button class="btn primary" id="modal-yes"></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="toasts" id="toasts"></div>
+  </div>
+
+  <script src="./assets/app.js"></script>
+</body>
+</html>
